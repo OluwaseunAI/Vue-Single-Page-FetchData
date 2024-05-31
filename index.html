@@ -11,7 +11,7 @@
     <div id="app">
       <a href="https://github.com/OluwaseunAI/Vue-Single-Page-FetchData/">Link to Repo: https://github.com/OluwaseunAI/Vue-Single-Page-FetchData</a>
       <h1>User Generator Using FetchAPI Methods and VueJS</h1>
-      <div v-for="(user, index) in users">
+      <div class="wrap" v-for="(user, index) in users">
       <img v-bind:src="avatarImages[index]" alt="" />
       <h2>{{user.name}}</h2>
       <h2>Email : {{user.email}}</h2>
@@ -27,5 +27,77 @@
       </button>
     </div>
   </body>
+  <style scoped>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+body{
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+}
+#app {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  /* padding-top: 50px; */
+  padding: 25px auto 25px auto;
+  margin-top: 25px;
+  /* margin-left: auto; */
+  /* margin-right: auto; */
+}
+
+h1{
+  padding-top: 20px;
+  margin: 20px auto 0 auto;
+  width: 80vw;
+  padding-bottom: 20px;
+  background-color: rgb(25, 161, 251);
+}
+
+img {
+  width: 150px;
+  height: 150px;
+  border: 3px solid black;
+  border-radius: 50%;
+}
+
+button {
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 40px auto 40px auto;
+}
+a{
+  margin-bottom: 20px;
+}
+
+.male {
+  border: 3px solid steelblue;
+  background-color: steelblue;
+  color: white;
+}
+
+.female {
+  border: 3px solid pink;
+  background-color: pink;
+}
+.wrap{
+  margin-bottom: 80px;
+}
+
+    .wrap{
+align-items: center;
+justify-content: center;
+display: block;
+padding: 50px;
+background-color: rgb(228, 140, 39);
+border: 2px solid black;
+border-radius: 8px;
+box-shadow: 0 0 10px rgba(81, 66, 66, 0.1);
+margin: 50px auto 80px auto;
+width: 50vw;
+}
+  </style>
   <script src="app.js"></script>
 </html>
