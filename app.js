@@ -37,6 +37,7 @@ const app = Vue.createApp({
       console.log(pageProfile);
 
       this.name = pageProfile.name;
+      this.id = pageProfile.id
       // const  = address
       // this.address = pageProfile.address.{ Street, suite, city, zipcode };
       // this.address = `${pageProfile.address.suite},${pageProfile.address.street} , ${pageProfile.address.city} , ${pageProfile.address.zipcode}` ;

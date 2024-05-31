@@ -12,13 +12,14 @@
       <a href="https://github.com/OluwaseunAI/Vue-Single-Page-FetchData/">Link to Repo: https://github.com/OluwaseunAI/Vue-Single-Page-FetchData</a>
       <h1>User Generator Using FetchAPI Methods and VueJS</h1>
       <div class="wrap" v-for="(user, index) in users">
+      <span><h3>USER PROFILE:</h3> <p><b>ID:</b> User_{{user.id}}</p></span>
       <img v-bind:src="avatarImages[index]" alt="" />
-      <h2>{{user.name}}</h2>
-      <h2>Email : {{user.email}}</h2>
-      <h2>Phone : {{user.phone}}</h2>
-      <h2>Address : {{formattedAddress[index]}}</h2>
-      <h2>Website : {{user.website}}</h2>
-      <h2>Company : {{ user.company.name }}</h2>
+      <h2 class="name">{{user.name}}</h2><hr>
+      <h2><b>Email :</b> {{user.email}}</h2>
+      <h2><b>Phone :</b> {{user.phone}}</h2>
+      <h2><b>Address :</b> {{formattedAddress[index]}}</h2>
+      <h2><b>Website :</b> {{user.website}}</h2>
+      <h2><b>Company :</b> {{ user.company.name }}</h2>
 
 
       </div>
@@ -54,36 +55,61 @@ h1{
   width: 80vw;
   padding-bottom: 20px;
   background-color: rgb(25, 161, 251);
+  border-radius: 5px;
 }
-
+span{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  background-color: rgb(36, 28, 28);
+  height: 30px;
+  margin: 0 auto 20px auto;
+  color: #fff;
+  padding: 15px;
+}
+p{
+  align-items: right;
+}
 img {
   width: 150px;
   height: 150px;
-  border: 3px solid black;
+  border: 2px solid #ffff;
   border-radius: 50%;
 }
+.name{
+  font-weight: 1000;
+  text-align: center;
+  font-size: 30px;
+  padding-bottom: 20px;
+  padding-top: 10px;
+}
 
+h2{
+  font-weight: 500;
+  text-align: left;
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+
+hr{
+  width: 80%;
+  color: unset;
+  margin-left: 80px;
+  margin-bottom: 20px;
+  text-align: center;
+  align-items: center;
+}
 button {
   padding: 10px 20px;
   cursor: pointer;
   margin: 40px auto 40px auto;
+  color: #fff;
+  background-color: rgba(94, 94, 94, 0.3);
+  border-radius: 5px;
+  border:1.3px solid rgb(36, 28, 28)
 }
 a{
   margin-bottom: 20px;
-}
-
-.male {
-  border: 3px solid steelblue;
-  background-color: steelblue;
-  color: white;
-}
-
-.female {
-  border: 3px solid pink;
-  background-color: pink;
-}
-.wrap{
-  margin-bottom: 80px;
 }
 
     .wrap{
@@ -93,7 +119,7 @@ display: block;
 padding: 50px;
 background-color: rgb(228, 140, 39);
 border: 2px solid black;
-border-radius: 8px;
+border-radius: 12px;
 box-shadow: 0 0 10px rgba(81, 66, 66, 0.1);
 margin: 50px auto 80px auto;
 width: 50vw;
