@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random User Generator</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h1>User Generator Using FetchAPI Methods and VueJS</h1>
+      <img v-bind:class="gender" v-bind:src="picture" alt="" />
+      <h2>{{name}}</h2>
+      <h2>Email : {{email}}</h2>
+      <h2>Phone : {{phone}}</h2>
+      <h2>Address : {{address}}</h2>
+      <h2>Website : {{website}}</h2>
+      <h2>Company : {{company}}</h2>
+      <button v-on:click="getUser">
+        GET RANDOM USER
+      </button>
+    </div>
+  </body>
+  <script src="app.js"></script>
+</html>
